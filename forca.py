@@ -1,40 +1,43 @@
 def jogar():
+    # Apresentação
     print("*********************************")
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 
-    palavra_secreta = "Renato"
-    palavra_secreta = palavra_secreta.upper()
-    letras_acertadas = ['_', '_', '_', '_', '_', '_']
+    # Variaveis
+    palavra_secreta = "Abacaxi".upper()
+    num_caracteres = len(palavra_secreta)
+    letras_acertadas = ["_" for letra in palavra_secreta]
     enforcou = False
     acertou = False
     chances = 5
+
+    # Laço de repetição não para até que o jogador perca ou acerte a palavra
     while not enforcou and not acertou:
         chute = input("Digite o seu chute: ").strip().upper()
         index = 0
-        for letra in palavra_secreta:
-            if letra.upper() == chute:
-                letras_acertadas[index] = letra.upper()
-            index = index + 1
-        print(''.join(letras_acertadas))
-        if palavra_secreta.find(chute) < 0:
+
+        if chute in palavra_secreta:
+            # Loop para comparar cada letra da palavra secreta com o chute
+            for letra in palavra_secreta:
+                if letra == chute:
+                    letras_acertadas[index] = letra
+                index += 1
+            if ''.join(letras_acertadas).find('_') < 0:
+                acertou = True
+                print("Você acertou!!! Imagine que caiu uma chuva de confetes, agora vá embora")
+            print(''.join(letras_acertadas))
+        else:
             chances = chances-1
             if chances == 0:
                 enforcou = True
-                print("Você errou, talvez seja melhor ler um livro e aprender palavras novas")
-        if ''.join(letras_acertadas).find('_') < 0:
-            acertou = True
-            print("Você acertou!!!")
-        #if chute == palavra_secreta:
-        #    acertou = True
-        #    print("Parabéns você acertou")
-        #else:
-        #    chances = chances-1
-        #    if chances == 0:
-        #        enforcou = True
-        #
-        #    else:
-        #        print("Continue jogando...")
+                print("Você errou, a palavra era {} "
+                      "talvez seja melhor ler um livro "
+                      "e aprender palavras novas".format(palavra_secreta))
+            else:
+                # Imprime como está o estado atual da palavra
+                print(''.join(letras_acertadas))
+                print("Você tem {} chances".format(chances))
     print("Fim do jogo")
 
 
