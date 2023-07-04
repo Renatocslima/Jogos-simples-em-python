@@ -1,10 +1,10 @@
 # Central de jogos simples de texto em Python
 >Status do projeto: Em desenvolvimento
 
-Esse código aprensenta uma tela que dá duas opções de jogos  
+Esse código apresenta uma tela que dá duas opções de jogos
   
 (1) Jogo da forca:   
->Nesse jogo o usuário deve acertar todas as letras de uma palavra pondendo errar 5 vezes, 
+>Nesse jogo o usuário deve acertar todas as letras de uma palavra pondendo errar de acordo com os níveis de dificuldade, 
 as palavras são selecionadas do arquivo palavras.txt que você pode alterar para colocar 
 novas palavras ou altera-las, lembrando apenas de pular linhas ao adicionar as palavras.
 
