@@ -1,5 +1,18 @@
 # Central de jogos simples de texto em Python
->Status do projeto: Em desenvolvimento
+
+Projeto de jogos com python - Portifólio de curso de Python da Alura
+
+| :placard: Vitrine.Dev |  https://cursos.alura.com.br/vitrinedev/renato-cslima7   |
+| -------------  | --- |
+| :sparkles: Nome        | **jogos simples de texto em Python**
+| :label: Tecnologias | python
+| :rocket: URL         | https://url-deploy.com.br
+| :fire: Desafio     | https://url-do-desafio.com.br
+
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](https://github.com/Renatocslima/Jogos-simples-em-python/blob/main/Capa.png?raw=true#vitrinedev)
+
+## Detalhes do projeto
 
 Esse código apresenta uma tela que dá duas opções de jogos
   
